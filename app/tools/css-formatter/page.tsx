@@ -84,7 +84,7 @@ export default function CssFormatterPage() {
                         It involves organizing properties, aligning values, and ensuring consistent indentation and spacing.
                     </p>
                     <p className="text-gray-300">
-                        This tool allows you to quickly format your CSS code. Simply paste your CSS into the input field and click "Format CSS" to see the beautified version.
+                        This tool allows you to quickly format your CSS code. Simply paste your CSS into the input field and click &ldquo;Format CSS&rdquo; to see the beautified version.
                     </p>
                 </CardContent>
             </Card>

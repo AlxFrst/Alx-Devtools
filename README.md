@@ -12,6 +12,7 @@ DevTools is a cutting-edge web application built with Next.js that provides a cu
 - 🔍 JWT Debugger: Easily inspect and validate JSON Web Tokens
 - 🎨 JSON Formatter: Beautify and validate your JSON with improved performance
 - 🌙 Dark Mode: A refined dark theme for those late-night coding sessions
+- 📦 Don't see what you need? Submit a PR and contribute to the project!
 
 ## 🚀 Getting Started
 

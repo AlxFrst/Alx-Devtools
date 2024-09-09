@@ -67,10 +67,10 @@ export default function Base64DecoderPage() {
                 <CardContent>
                     <p className="mb-4 text-gray-300">
                         Base64 is a group of binary-to-text encoding schemes that represent binary data in an ASCII string format.
-                        It's commonly used when there's a need to encode binary data that needs to be stored and transferred over media that are designed to deal with text.
+                        It&apos;s commonly used when there&apos;s a need to encode binary data that needs to be stored and transferred over media that are designed to deal with text.
                     </p>
                     <p className="text-gray-300">
-                        This tool allows you to quickly decode Base64 encoded strings. Simply paste your Base64 encoded text into the input field and click "Decode" to see the original text.
+                        This tool allows you to quickly decode Base64 encoded strings. Simply paste your Base64 encoded text into the input field and click &quote;Decode&quote; to see the original text.
                     </p>
                 </CardContent>
             </Card>

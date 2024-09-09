@@ -67,12 +67,12 @@ export default function Base64EncoderPage() {
                 <CardContent>
                     <p className="mb-4 text-gray-300">
                         Base64 encoding is a process of converting binary data into a text format. It uses a set of 64 characters
-                        (hence the name) to represent the binary data. This encoding is commonly used when there's a need to store
+                        (hence the name) to represent the binary data. This encoding is commonly used when there&apos;s a need to store
                         or transfer binary data in environments that only support text, such as email systems.
                     </p>
                     <p className="text-gray-300">
                         This tool allows you to quickly encode text into Base64 format. Simply type or paste your text into the
-                        input field and click "Encode" to see the Base64 encoded version. Note that while Base64 encoding can be
+                        input field and click &quote;Encode&quote; to see the Base64 encoded version. Note that while Base64 encoding can be
                         used to obfuscate data, it is not a form of encryption and does not provide security.
                     </p>
                 </CardContent>

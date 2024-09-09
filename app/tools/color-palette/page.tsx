@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { HexColorPicker } from "react-colorful";
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -20,20 +20,20 @@ const ColorPaletteGenerator = () => {
     const [baseColor, setBaseColor] = useState('#007bff');
     const [palettes, setPalettes] = useState(preGeneratedPalettes);
 
-    useEffect(() => {
-        const generatePalette = () => {
-            const hsl = hexToHSL(baseColor);
-            const newPalette = [
-                baseColor,
-                hslToHex(hsl.h, Math.max(0, hsl.s - 20), Math.min(100, hsl.l + 20)),
-                hslToHex(hsl.h, Math.max(0, hsl.s - 40), Math.min(100, hsl.l + 40)),
-                hslToHex(hsl.h, Math.min(100, hsl.s + 20), Math.max(0, hsl.l - 20)),
-            ];
-            setPalettes([newPalette, ...palettes.slice(0, palettes.length - 1)]);
-        };
+    const generatePalette = useCallback(() => {
+        const hsl = hexToHSL(baseColor);
+        const newPalette = [
+            baseColor,
+            hslToHex(hsl.h, Math.max(0, hsl.s - 20), Math.min(100, hsl.l + 20)),
+            hslToHex(hsl.h, Math.max(0, hsl.s - 40), Math.min(100, hsl.l + 40)),
+            hslToHex(hsl.h, Math.min(100, hsl.s + 20), Math.max(0, hsl.l - 20)),
+        ];
+        setPalettes(prevPalettes => [newPalette, ...prevPalettes.slice(0, prevPalettes.length - 1)]);
+    }, [baseColor]);
 
+    useEffect(() => {
         generatePalette();
-    }, [baseColor, palettes]);
+    }, [generatePalette]);
 
     const copyToClipboard = (color: string) => {
         navigator.clipboard.writeText(color).then(() => {
@@ -43,7 +43,6 @@ const ColorPaletteGenerator = () => {
             toast.error('Erreur lors de la copie de la couleur');
         });
     };
-
 
     const hexToHSL = (hex: string) => {
         const r = parseInt(hex.slice(1, 3), 16) / 255;

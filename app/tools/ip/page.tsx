@@ -86,5 +86,6 @@ export default function IpInfoPage() {
                 </CardContent>
             </Card>
         </div>
+        
     );
 }

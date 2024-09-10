@@ -14,6 +14,14 @@ DevTools is a cutting-edge web application built with Next.js that provides a cu
 - 🌙 Dark Mode: A refined dark theme for those late-night coding sessions
 - 📦 Don't see what you need? Submit a PR and contribute to the project!
 
+## 🐳 Docker Deployment
+To deploy the application using Docker, use the following command:
+    
+```bash
+docker run -p 3000:3000 alxfrst/alx-devtools:latest
+```
+This command pulls the latest image from Docker Hub and runs it, mapping port 3000 of the container to port 3000 on your host machine.
+
 ## 🚀 Getting Started
 
 1. Clone the repository:

@@ -2,9 +2,9 @@ name: Next.js CI/CD
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build-and-test:
@@ -47,4 +47,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/nextjs-app:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/alx-devtools:latest
